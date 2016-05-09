@@ -1,0 +1,14 @@
+{
+  "name": "cool-regex",
+  "version": "1.0.0",
+  "description": "Regex Tester",
+  "main": "main.js",
+  "author": "jarvin",
+  "devDependencies": {
+    "grunt-nw-builder": "^2.0.0",
+    "electron-prebuilt": "^0.37.8"
+  },
+  "scripts": {
+    "start":  "electron ." 
+  }
+}
