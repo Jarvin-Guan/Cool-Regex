@@ -10,8 +10,9 @@ module.exports = function (grunt) {
             'package.json',
             './public/**/*',
             './node_modules/mysql/**/*'] // Your NW.js app
-    },
-    })
+    }
+    }
+    )
     
     grunt.loadNpmTasks('grunt-nw-builder');
 

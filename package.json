@@ -5,10 +5,10 @@
   "main": "main.js",
   "author": "jarvin",
   "devDependencies": {
-    "grunt-nw-builder": "^2.0.0",
-    "electron-prebuilt": "^0.37.8"
+    "electron-prebuilt": "^0.37.8",
+    "grunt": "^1.0.1"
   },
   "scripts": {
-    "start":  "electron ." 
+    "start": "electron ."
   }
 }
