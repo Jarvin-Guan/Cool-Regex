@@ -1,15 +1,22 @@
 var view =new Vue({
   el: '#app',
   data: {
-    RegexStr: '[\\s\\S]+',
-    ReplaceStr: '122',
-    TextValue:  '1'
+    RegexStr: '',
+    ReplaceStr: '',
+    TextValue:  '',
+    IsReplace: false
   },
   methods:{
       Run: function () {
-          console.log(this.RegexStr);
-          console.log(this.ReplaceStr);
-          console.log(this.TextValue);
+        let match ;
+        let Regex = new RegExp(this.RegexStr,'g');
+        while(match = Regex.exec(this.TextValue)){
+          alert(match[1]);
+        }
+      },
+      ReplaceMode: function() {
+        this.IsReplace = !this.IsReplace;
+        console.log(this.IsReplace);
       }
   }
 })

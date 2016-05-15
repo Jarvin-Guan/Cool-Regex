@@ -15,29 +15,43 @@
     <script src="/lib/semantic/dist/semantic.min.js"></script>
 </head>
 <body>
-    <div class="ui vertically divided grid" id="app" style="margin:0px 0px 0px 2px;">
+    <div class="ui vertically divided grid" id="app" style="margin:10px 20px 0px 20px;">
         <div class="one column row" >
             <div class="column" >
-                <button class="mini ui green button" v-on:click="Run">Run</button>
+                <button class="mini ui green button" v-on:click="Run">运行(F5)</button>
+                <button class="mini ui button " v-on:click="ReplaceMode">替换</button>
+                <button class="mini ui right floated button ">代码生成</button>
             </div>
         </div>
         <div class="two column row">
             <div class="column" >
-                <div class="ui fluid input">
-                    <textarea type="text" placeholder="正则表达式" cols="20" v-model="RegexStr"></textarea>
+                <div class="ui raised segment">
+                    <a class="ui ribbon label">正则表达式</a>
+                    <p></p>
+                    <div class="ui  fluid input">
+                        <textarea type="text" cols="20" v-model="RegexStr"></textarea>
+                    </div>
                 </div>
             </div> 
-            <div class="column" >
-                <div class="ui fluid input">
-                    <textarea type="text" placeholder="替换表达式" v-model="ReplaceStr"></textarea>
+            <div class="column" v-if="IsReplace">
+                <div class="ui raised segment">
+                    <a class="ui ribbon label">替换表达式</a>
+                    <p></p>
+                    <div class="ui fluid input">
+                        <textarea type="text" v-model="ReplaceStr" ></textarea>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="two column row">
             <div class="column">
-                <div class="ui fluid input">
-                    <textarea class="inputtext" type="text" placeholder="文本"  
-                    style="height:240px"  v-model="TextValue"/></textarea>
+                <div class="ui raised segment">
+                    <a class="ui ribbon label">文本</a>
+                    <p></p>
+                    <div class="ui fluid input">
+                        <textarea class="inputtext" type="text" 
+                             style="height:240px"  v-model="TextValue"/></textarea>
+                    </div>
                 </div>
             </div>
             <div class="column">
