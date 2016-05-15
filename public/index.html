@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Jarvin-Guan">
+    <style type="text/css">
+        textarea {height: 150px;width: 100%}
+    </style>
+    <title >Cool-Regex</title>
+
+    <link rel="stylesheet" type="text/css" href="/lib/semantic/dist/semantic.min.css">
+    <script src="/lib/semantic/dist/semantic.min.js"></script>
+</head>
+<body>
+    <div class="ui vertically divided grid" id="app" style="margin:0px 0px 0px 2px;">
+        <div class="one column row" >
+            <div class="column" >
+                <button class="mini ui green button" v-on:click="Run">Run</button>
+            </div>
+        </div>
+        <div class="two column row">
+            <div class="column" >
+                <div class="ui fluid input">
+                    <textarea type="text" placeholder="正则表达式" cols="20" v-model="RegexStr"></textarea>
+                </div>
+            </div> 
+            <div class="column" >
+                <div class="ui fluid input">
+                    <textarea type="text" placeholder="替换表达式" v-model="ReplaceStr"></textarea>
+                </div>
+            </div>
+        </div>
+        <div class="two column row">
+            <div class="column">
+                <div class="ui fluid input">
+                    <textarea class="inputtext" type="text" placeholder="文本"  
+                    style="height:240px"  v-model="TextValue"/></textarea>
+                </div>
+            </div>
+            <div class="column">
+                <table class="ui celled table">
+                <thead>
+                    <tr>
+                    <th>Name</th>
+                    <th>Status</th>
+                    <th>Notes</th>
+                    <th>Notes</th>
+                    <th>Notes</th>
+                    <th>Notes</th>
+                    <th>Notes</th>
+                    <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                    <td>John</td>
+                    <td>Approved</td>
+                    <td>None</td>
+                    </tr>
+                    <tr>
+                    <td>Jamie</td>
+                    <td>Approved</td>
+                    <td>Requires call</td>
+                    </tr>
+                    <tr>
+                    <td>Jill</td>
+                    <td>Denied</td>
+                    <td>None</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr><th>3 People</th>
+                    <th>2 Approved</th>
+                    <th></th>
+                </tr></tfoot>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="/javascripts/vue.js"></script>
+    <script src="/vm/index.js"></script>
+</body>
+</html>
